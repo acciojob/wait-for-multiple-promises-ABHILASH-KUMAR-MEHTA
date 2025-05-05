@@ -2,11 +2,13 @@
 const outputBody = document.getElementById("output");
 
 const loadingRow = document.createElement("tr");
+loadingRow.id = "loading"; // ✅ this line is key
 const loadingCell = document.createElement("td");
 loadingCell.setAttribute("colspan", "2");
 loadingCell.innerText = "Loading...";
 loadingRow.appendChild(loadingCell);
 outputBody.appendChild(loadingRow);
+
 
 function createRandomPromise(index) {
   const delay = Math.random() * 2 + 1; 
